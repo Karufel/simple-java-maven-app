@@ -3,6 +3,9 @@ pipeline {
         maven 'Default'
     }
     agent any
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
         stage('Build') { 
             steps {
